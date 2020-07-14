@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- === Header Starts === -->
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>YOLO-Tomato</title>
+
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/font.css" rel="stylesheet" type="text/css">
+  <link href="./assets/style.css" rel="stylesheet" type="text/css">
+</head>
+<!-- === Header Ends === -->
+
+
+<body>
+
+
+<!-- === Home Section Starts === -->
+<div class="section">
+  <!-- === Title Starts === -->
+  <div class="header">
+    <div class="logo">
+      <img src="./assets/pnu.png">
+    </div>
+    <div class="title", style="padding-top: 10pt;">
+     YOLO-Tomato: A Robust Algorithm for Tomato Detection Based on YOLOv3
+    </div>
+  </div>
+  <!-- === Title Ends === -->
+  <div class="author">
+    <a href="http://pandalgx.github.io/pandalgx">Guoxu Liu</a><sup>1,2</sup>,&nbsp;
+    Joseph Christian Nouaze<sup>2</sup>,&nbsp;
+    Philippe Lyonel Touko<sup>2</sup>,&nbsp;
+    <a href="https://image-comm-lab.github.io/image-comm-lab/">Jae Ho Kim</a><sup>2</sup>&nbsp;
+  </div>
+  <div class="institution">
+    <sup>1</sup> Weifang University of Science and Technology, China <br>
+    <sup>2</sup> Pusan National University, Korea
+  </div>
+  <div class="link">
+    <a href="https://www.mdpi.com/1424-8220/20/7/2145?type=check_update&version=2" >[Paper]</a>
+  </div>
+  <div class="teaser">
+    <img src="./assets/framework.jpg">
+  </div>
+</div>
+<!-- === Home Section Ends === -->
+
+
+<!-- === Overview Section Starts === -->
+<div class="section">
+  <div class="title">Overview</div>
+  <div class="body">
+     In this study, an improved tomato
+detection model called <b>YOLO-Tomato</b> is proposed for dealing with these problems, based on YOLOv3.
+A dense architecture is incorporated into YOLOv3 to facilitate the reuse of features and help to learn a
+more compact and accurate model. Moreover, the model replaces the traditional rectangular bounding
+box (R-Bbox) with a circular bounding box (C-Bbox) for tomato localization. The new bounding
+boxes can then match the tomatoes more precisely, and thus improve the Intersection-over-Union
+(IoU) calculation for the Non-Maximum Suppression (NMS). They also reduce prediction coordinates.
+  </div>
+</div>
+<!-- === Overview Section Ends === -->
+
+
+<!-- === Result Section Starts === -->
+<div class="section">
+  <div class="title">Results</div>
+  <div class="body">
+    We perform an ablation analysis of dense architecture and C-Bbox.
+
+    <table width="100%" style="margin: 20pt auto; text-align: center;">
+      <tr>
+        <td><img src="./assets/ablation.jpg" width="70%"></img></td>
+      </tr>
+    </table>
+
+    The network visualization.
+
+    <!-- Adjust the frame size based on the demo (Every project differs). -->
+    <table width="100%" style="margin: 20pt auto; text-align: center;">
+      <tr>
+        <td><img src="./assets/visualization.jpg" width="80%"></img></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!-- === Result Section Ends === -->
+
+
+<!-- === Reference Section Starts === -->
+<div class="section">
+  <div class="bibtex">BibTeX</div>
+<pre>
+@article{liu2020yolo,
+  title   = {YOLO-Tomato: A Robust Algorithm for Tomato Detection based on YOLOv3},
+  author  = {Liu, Guoxu and Nouaze, Joseph Christian and Touko, Philippe Lyonel and Kim, Jae Ho},
+  journal = {Sensors},
+  volume  = {20},
+  number  = {7},
+  pages   = {2145},
+  year    = {2020},
+  doi     = {10.3390/s20072145}
+}
+</pre>
+
+  <div class="ref">Related Work</div>
+  <div class="citation">
+    <div class="image"><img src="./assets/hog+svm.jpg"></div>
+    <div class="comment">
+      <a href="https://pandalgx.github.io/pandalgx/pub/tomatodetection_sensors2019/website/index.html">
+        G. Liu, S. Mao, J.H. Kim.
+        A Mature-Tomato Detection Algorithm Using Machine Learning and Color Analysis.
+        Sensors, 19(9), 2019.</a><br>
+      <b>Comment:</b>
+      Detect tomatoes using a coarse-to-fine framework based on the combination of HOG, SVM, and a color analysis method.
+    </div>
+  </div>
+</div>
+<!-- === Reference Section Ends === -->
+
+
+</body>
+</html>

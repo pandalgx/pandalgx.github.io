@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <!--<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <title>A Mature-Tomato Detection Algorithm Using Machine Learning and Color Analysis</title>
+
+  <style type="text/css">
+
+    body {
+      margin: 0px;
+      background-color: #252525;
+      font-family: 'Open Sans', sans-serif;
+      color: #ffffff;
+    }
+
+    h1 {
+      text-align: center;
+      color: #f4f4f4;
+      font-size: 28px;
+      margin-top:15px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 25px;
+    }
+
+    .text {
+    	font-size: 16px;
+      color: #ffffff;
+    }
+
+    #headerdiv {
+      width: 1000px;
+      margin: auto;
+    }
+    #maincontent {
+      width: 1000px;
+      margin: auto;
+      height: 440px;
+    }
+
+    #suppcontent {
+      padding-top: 0px;
+      background-color: black;
+      color: #BBBBBB;
+      font-size: 16px;
+    }
+
+    #content {
+      width: 1000px;
+      margin: auto;
+    }
+    td {
+      vertical-align: top;
+      text-align: center;
+    }
+    .desc {
+      color: #888888;
+    }
+    .center {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    .logo-universities {
+      text-align: left;
+      margin-top: 20px;
+      margin-left: 68px;
+      margin-bottom: 0px;
+    }
+    .logo {
+      text-align: left;
+      margin-top: 20px;
+      margin-left: 7px;
+      margin-bottom: 0px;
+      display: inline
+    }
+    .universities {
+      /* float: right; */
+      margin-top: 20px;
+      margin-left: 20px;
+      margin-bottom: 0px;
+      display: inline
+    }
+
+    .institution {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 300;
+    }
+    .institution a {
+      color: #ffffff;
+    }
+    .center {
+      text-align: center;
+    }
+    .authors {
+      text-align: center;
+    }
+    .author {
+      margin-right: 58px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #ffffff;
+    }
+
+    .resources {
+      /*text-align: center;*/
+      margin-top: 30px;
+      font-size: 20px;
+      line-height: 2.8;
+      color: #ffffff;
+    }
+
+
+    .author a {
+      color: #ffffff;
+      /*font-weight: bold;*/
+    }
+
+    p {
+      line-height: 1.8;
+      width: 1000px;
+      font-size: 16px;
+    }
+
+    sup {
+      color: #ffffff;
+    }
+
+  
+    .demo {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+
+    #files {
+      color: #555555;
+      margin-top: 20px;
+      font-size: 25px;
+    }
+
+    #files a {
+      text-decoration: None;
+      color: #3376cb;
+    }
+
+    a {
+          text-decoration: None;
+    }
+    .resources a:link { color: #057cfc; text-decoration: none }
+    .resources a:visited { color: #057cfc; text-decoration: none }
+    .resources a:hover { color: #063bb9; text-decoration: none }
+    .resources a:active { color: #063bb9; text-decoration: none }
+	
+	/* Related Work */
+	.ref {
+	  margin: 20pt 0 10pt 0;  /* top right bottom left */
+	  text-align: left;
+	  font-size: 18pt;
+	  font-weight: bold;
+	}
+	
+	/* Citation */
+	.citation {
+	  min-height: 60pt;
+	  margin: 10pt 0;
+	}
+	.citation .image {
+	  width: 120pt;
+	  float: left;
+	}
+	.citation .image img {
+	  max-height: 60pt;
+	  width: 120pt;
+	  object-fit: cover;
+	}
+	.citation .comment{
+	  margin-left: 130pt;
+	  text-align: left;
+	  font-size: 13pt;
+	}
+
+  </style>
+</head>
+
+<body>
+<!-- <div class="logo-universities">
+    <div class="logo">
+      <img src="./assets/pnu.png" width=120>
+    </div>
+  </div> -->
+<br>
+  <div id="headerdiv">
+  <!-- <img src="./assets/pnu.png" width=100px></p> -->
+<h1>
+A Mature-Tomato Detection Algorithm Using Machine Learning and Color Analysis
+</h1>
+
+<div class="authors">
+<span class="author"> 
+  <div text-align="justify">
+  <a href="http://pandalgx.github.io/pandalgx">Guoxu Liu<sup>1,2</sup></a>, 
+  Shuyi Mao<sup>2</sup>, 
+  <a href="https://image-comm-lab.github.io/image-comm-lab/">Jae Ho Kim<sup>2</sup></a>
+  </div>
+</span>
+</div>
+<div class="institution">
+  <sup>1</sup> <a  href="http://www.wfust.edu.cn/">Weifang University of Science and Technology</a> <br>
+  <sup> 2</sup> <a  href="http://www.pusan.ac.kr/eng/Main.do">Pusan National University   </a>
+</div>
+
+
+<div class="resources" align="center">
+   <!-- CVPR 2020<br> -->
+   <!-- <img src="CVPR_Logo_Horz2_web.jpg" align="center" width=200px><br> -->
+   <a href="https://www.mdpi.com/1424-8220/19/9/2023?type=check_update&version=1"><b>Paper</b></a> | 
+   <a href="https://pandalgx.github.io/pandalgx/Datasets/Tomato/Tomato_dataset.html"><b>Dataset</b></a>
+   <!-- <p><img src="motion_transfer_v3.jpg" width=100%></p> -->
+</div>
+
+<h2>Introduction</h2>
+
+<p>An algorithm was proposed for automatic tomato detection in regular color images to reduce
+the influence of illumination and occlusion.</p>
+<p align="center">
+  <img src="./assets/results.png" width="60%">
+</p><br>
+
+<h3>Framework</h3>
+<p> In this method, the Histograms of Oriented Gradients descriptor was used to train a Support Vector Machine classifier. A coarse-to-fine scanning method was developed to detect tomatoes, followed by a proposed False Color Removal method to remove the false-positive detections. Non-Maximum Suppression was used to merge the overlapped results.</p><p>
+</p><p align="center"><img src="./assets/framework.jpg" width="75%"></p>
+
+<h3>Image Scanning Method</h3>
+<p>To deal with the tomato size variation problem, an image pyramid strategy was proposed for tomato scanning. Besides, an ROI was extracted using a Naive Bayes classifier based on the color feature of each pixel to reduce the search area and improve the efficiency.</p><p>
+</p><p align="center"><img src="./assets/image_scanning.jpg" width="75%"></p>
+
+<!-- <h3>This allows us to selectively transfer motion extracted from the source video seamlessly to the target video in spite of structural and view-angle disparities between the source and the target.</h3>
+<p align="center"><img src="/assets/transmomo/dance.gif" width=65%></p> -->
+
+<h3>False Color Removal</h3>
+<p>The False Color Removal method is proposed to eliminate the false positive detections by the SVM. The color feature of the sub-window is used to segment the sub-window. Then the white-pixel-ratio is applied to decide whether the window is a tomato or background. An optimization problem is solved for the color feature derivation.</p>
+<p align="center"><img src="./assets/fcr.jpg" width="85%"></p>
+
+
+<h2 class="abstract"> BibTex </h2>
+
+  <div class="text" style="margin-left:20px">
+  <code>
+    @article{liu2019mature, <br>
+    title   = {A Mature-Tomato Detection Algorithm Using Machine Learning and Color Analysis}, <br>
+    author  = {Liu, Guoxu and Mao, Shuyi and Kim, Jae Ho}, <br>
+    journal = {Sensors}, <br>
+    volume  = {19}, <br>
+    nuber   = {9}, <br>
+    pages   = {2023}, <br>
+    year    = {2019}, <br>
+    doi     = {10.3390/s19092023} <br>
+  }
+  </code>
+  </div>
+  
+  <div class="ref">Related Work</div>
+  <div class="citation">
+    <div class="image"><img src="./assets/yolotomato.png"></div>
+    <div class="comment">
+      <a href="https://pandalgx.github.io/pandalgx/pub/yolotomato_sensors2020/webpage/index.html" style="color:rgba(255,153,102,1)">
+        G. Liu, J.C. Nouaze, P.L. Touko, J.H. Kim.
+        YOLO-Tomato: A Robust Algorithm for Tomato Detection Based on YOLOv3.
+        Sensors, 20(7), 2020.</a><br>
+      <b>Comment:</b>
+      Proposes an improved deep learning method based on YOLOv3 for tomato detection.
+    </div>
+  </div>
+
+<br>
+<br>
+<br>
+
+</div>
+
+</body>
+</html>
